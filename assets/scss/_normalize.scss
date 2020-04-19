@@ -1,0 +1,31 @@
+/* Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-weight: inherit;
+}
+
+html{
+    font-family: $quicksand;
+    font-size: 22px;
+    @include lt(sm) {
+        font-size: 18px;
+    }
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+svg {
+    path, circle, rect {
+        color: inherit;
+    }
+}

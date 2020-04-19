@@ -1,0 +1,12 @@
+section.first-section {
+    @extend %container;
+    @extend %gutter;
+
+    overflow: hidden;
+
+    img {
+        display: block;
+        width: 100%;
+        scale: 1;
+    }
+}

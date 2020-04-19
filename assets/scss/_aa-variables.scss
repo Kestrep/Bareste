@@ -1,0 +1,43 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400&family=Roboto:wght@300;700&display=swap');
+
+    // Family
+$roboto: 'roboto', sans-serif;
+$quicksand: 'quicksand', sans-serif;
+
+    // Weight
+$regular: 400;
+
+// Colors
+
+$primary-color: #0DAEC9;
+$secondary-color: #000;
+
+$black: #000;
+$white: #fff;
+
+$light-grey: #EDEDED;
+$dark-grey: #2B2B2B;
+
+$danger-color: rgb(209, 17, 4);
+$confirm-color: rgb(35, 165, 18);
+
+// Divers
+$gutter: 15px;
+$icon-size: 64px;
+
+// Snippets
+
+    // Burger
+$burger-width: 42px;
+$burger-height: 32px;
+$burger-weight: 2px;
+$burger-line-radius: 1px;
+$burger-color: $dark-grey;
+
+$burger-transition: 0.7s ease;
+
+$burger-display-threshold: md;
+
+    // header
+$header-height: 70px;

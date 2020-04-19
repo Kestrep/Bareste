@@ -1,0 +1,50 @@
+.burger {
+    width: $burger-width;
+    height: $burger-height;
+
+    position: relative;
+
+    div[class^="line"] {
+        width: 100%;
+        height: $burger-weight;
+        background-color: $burger-color;
+        border-radius: $burger-line-radius;
+
+        position: absolute;
+        left: 0;
+
+        transition: $burger-transition;
+    }
+
+    .line-1 {
+        top: 0;
+    }
+    .line-2 {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .line-3 {
+        bottom: 0;
+    }
+    
+    &.active {
+        .line-1 {
+            top: 50%;
+            transform: translateY(-50%) rotateZ(45deg);
+        }
+        .line-2 {
+            transform: rotateZ(180deg);
+            opacity: 0;
+        }
+        .line-3 {
+            bottom: 50%;
+            transform: translateY(50%) rotateZ(-45deg);
+
+        }
+
+    }
+
+    @include mt($burger-display-threshold) {
+        display: none;
+    }
+}

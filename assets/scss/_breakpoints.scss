@@ -1,0 +1,38 @@
+/* Breakpoints */
+/*
+    xl: 1240,
+    lg: 1024,
+    md: 760,
+    sm: 560,
+    xs: 480
+*/
+@function assert-value($value) {
+    @if($value == sm) {
+        @return 560;
+    }
+    @if($value == md) {
+        @return 760;
+    }
+    @if($value == lg) {
+        @return 1024;
+    }
+    @if($value == xl) {
+        @return 1240;
+    }
+    @else {
+        @return $value;
+    }
+
+}
+
+
+@mixin lt($value) {
+    @media all and (max-width: assert-value($value) + px) {
+        @content;
+    }
+}
+@mixin mt($value) {
+    @media all and (min-width: assert-value($value) + px) {
+        @content;
+    }
+}

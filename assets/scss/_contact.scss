@@ -1,0 +1,98 @@
+section.contact-form {
+    @extend %container;
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    flex-wrap: wrap;
+    
+    aside {
+        @extend %gutter;
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        align-items: center;
+        @include mt(md) {
+            display: block;
+            width: 33.3333%;
+        }
+        flex-shrink: 0;
+    }
+    
+    img {
+        width: 16.6666%;
+        @include mt(md) {
+            width: 100%;
+        }
+    }
+
+    .info div {
+        padding-left: 15px;
+        @include mt(md) {
+            text-align: end;
+        }
+    }
+
+    /* FORM */
+    
+    main {
+        @extend %gutter;
+        width: 100%;
+        flex-shrink: 0;
+        @include mt(md) {
+            width: 66.6666%;
+        }
+        background-color: $light-grey;
+    }
+
+    form .input {
+        margin: 15px auto;
+    }
+
+    h1 {
+        font-family: $roboto;
+        font-size: 1.5rem;
+    }
+
+    .text {
+        text-align: justify;
+    }
+
+    input[type="text"], textarea {
+        width: 100%;
+        border: none;
+        padding: 0.2rem 15px;
+        font-size: 1rem;
+        line-height: 1.2rem;
+    }
+
+    .input {
+        position: relative;
+    }
+    .input .underline {
+        position: absolute;
+        left: 15px;
+        bottom: 4px;
+        width: calc(100% - 30px);
+        height: 2px;
+        background-color: $dark-grey;
+    }
+
+    input:invalid, textarea:invalid {
+
+        box-shadow: none;
+    }
+
+    input:invalid + .underline, textarea:invalid + .underline {
+        background-color: $danger-color;
+    }
+    input:valid + .underline, textarea:valid + .underline {
+        background-color: $confirm-color;
+    }
+
+    button[type="submit"] {
+        border: none;
+        outline: none;
+        font-size: inherit;
+    }
+}
+

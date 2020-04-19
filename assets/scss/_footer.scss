@@ -1,0 +1,61 @@
+footer {
+    .fade-name {
+        margin-top: 4rem;
+        text-align: end;
+        font-size: 2rem;
+        line-height: 1rem;
+        margin-bottom: 4px;
+        @include mt(sm) {
+            margin-bottom: 2px;
+            font-size: 3rem;
+            line-height: 2rem;
+        }
+        @include mt(lg) {
+            margin-bottom: 0px;
+            font-size: 4rem;
+            line-height: 3rem;
+        }
+        font-family: $roboto;
+        color: $light-grey;
+        font-variant: small-caps;
+        font-weight: 700;
+    }
+
+    .footer-container {
+        background-color: $dark-grey;
+        color: $white;
+        padding: $gutter;
+
+        @include mt(md) {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+
+        }
+    }
+
+    .contact {
+        display: flex;
+        justify-content: center;
+        align-items: stretch;
+        font-size: 0.7rem;
+    }
+    .left {
+        text-align: end;
+        margin-right: $gutter;
+        vertical-align: bottom;
+    }
+    .right {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+    }
+    .name {
+        font-size: 1rem;
+        font-variant: small-caps;
+    }
+
+
+
+}

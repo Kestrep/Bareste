@@ -1,0 +1,8 @@
+.btn-primary {
+    display: inline-block;
+    padding: 0.5 * $gutter $gutter;
+    font-family: $roboto;
+    cursor: pointer;
+    color: $white;
+    background-color: $primary-color;
+}

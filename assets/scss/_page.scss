@@ -1,0 +1,143 @@
+
+.thumbnail-container {
+    @extend %container;
+    @extend %gutter;
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+}
+
+.title-anchor {
+    position: relative;
+    @extend %container;
+}
+
+h1.up {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 100%;
+    background-color: $white;
+    transform: translateX(-50%);
+    
+    font-family: $roboto;
+    font-size: 1.5rem;
+
+    padding: $gutter;
+
+    @include mt(sm) {
+        width: 83.3333%;
+    }
+    @include mt(md) {
+        width: 66.6666%;
+        font-size: 2rem;
+    }
+}
+section.content {
+    @extend %container;
+
+
+    p {
+        @extend %gutter;
+        text-align: justify;
+        text-indent: 2rem;
+        width: 100%;
+        margin: 15px auto;
+
+        @include mt(md) {
+            width: 66.6666%;
+        }
+    }
+
+    .wp-block-image {
+        
+        .alignleft, .alignright, .aligncenter {
+            position: relative;
+            margin: 15px;
+            @include mt(md) {
+                margin: 30px;
+            }
+            width: 50%;
+            img {
+                display: block;
+                font-size: 0;
+            }
+        
+            &::before {
+                content: "";
+                position: absolute;
+                width:  100%;
+                height: 100%;
+                border: $primary-color solid 1px;
+                top: 7px;
+                @include mt(md) {
+                    top: 15px;
+                }
+                z-index: -2;
+            }
+        }
+
+        .alignleft {
+            float: left;
+            margin-left: 0;
+            &::before {
+                right: 7px;
+                @include mt(md) {
+                    right: 15px;
+                }
+            }
+        }
+        .alignright, .aligncenter {
+            float: right;
+            margin-right: 0;
+            &::before {
+                left: 7px;
+                @include mt(md) {
+                    left: 15px;
+                }
+            }
+        }
+        .aligncenter {
+            float: none;
+            transform: translateX(45%);
+        }
+    }
+}
+
+section.contact-box {
+    @extend %container;
+    @extend %gutter;
+
+    .contact-box-wrapper {
+        background-color: $light-grey;
+        @extend %gutter;
+        display: flex;
+        justify-content: start;
+        align-items: stretch;
+    }
+    .image {
+        width: 33.3333%;
+        margin-right: 15px;
+        flex-shrink: 0;
+
+        img {
+            display: block;
+        }
+    }
+    .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: end;
+        align-items: start;
+    }
+
+    .info .title {
+        font-size: 1.5rem;
+    }
+
+    .info .content {
+        text-align: justify;
+    }
+}

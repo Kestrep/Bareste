@@ -1,0 +1,92 @@
+/* Navigation - header */
+
+body.menu-active {
+    overflow: hidden;
+}
+
+header.nav {
+    @extend %container;
+    @extend %f-sb-e;
+
+    height: $header-height;
+    @extend %gutter;
+
+    width: 100%;
+    background-color: $white;
+
+    .logo {
+        height: 100%;
+        display: flex;
+        align-items: end;
+
+        -webkit-user-select: none; /* Safari */        
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
+    }
+
+    .menu-principal-container {
+        width:50%;
+        @include lt($burger-display-threshold) {
+            position: absolute;
+        }
+    }
+    ul {
+        @extend %f-sb-c;
+        width: 100%;
+        z-index: 4;
+
+        @include lt($burger-display-threshold) {
+            position: fixed;
+            top: $header-height;
+            left: 0;
+            width: 100%;
+            height: calc(100vh - 70px);
+            background-color: $white;
+
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+
+
+            transform: translateX(100%);
+
+            &.active {
+                transform: translateX(0%)
+            }
+        }
+    }
+
+    li:hover {
+        color: $primary-color;
+    }
+
+    
+
+    li a {
+        position: relative;
+        font-family: $roboto;
+        font-size: 1.5rem;
+    }
+
+    li.active a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: 100%;
+        bottom: 0;
+        height: 1px;
+        background-color: $primary-color;
+    }
+
+    @import 'snippets/burger';
+    
+
+    
+}
+
+.header-divider {
+    margin-top: -1px;
+    height: 1px;
+    background-color: $primary-color;
+}

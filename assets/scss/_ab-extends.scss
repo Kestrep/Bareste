@@ -1,0 +1,38 @@
+// Dispositions flex
+
+%f-c-c {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+%f-sb-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+%f-sb-e {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}
+
+// Container
+%container {
+    margin: 0 auto;
+    
+    @include mt(lg) {
+        max-width: 960px;
+    }
+    @include mt(xl) {
+        max-width: 1024px;
+    }
+}
+
+// Gutter
+%gutter {
+    padding: 15px;
+
+    @include lt(md) {
+        padding: 10px;
+    }
+}

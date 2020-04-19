@@ -1,0 +1,70 @@
+section.catalogue {
+
+    @extend %container;
+    @extend %gutter;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    flex-direction: column;
+    @include mt(sm) {
+        flex-flow: row wrap;
+    }
+    position: relative;
+}
+
+.flyer {
+    /* TEMPORAIRE */
+    top: 315px;
+
+
+    position: absolute;
+    left: 15px;
+
+    /* MARGIN */
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    @include mt(md) {
+        margin-bottom: 30px;
+    }
+
+    max-height: 0px;
+    overflow: hidden;
+    transition: max-height 0.8s ease-out;
+
+    img {
+        float: left;
+        width: 83.3333%;
+    }
+
+    .info {
+        float: right;
+        margin-top: -60px;
+        * {
+            margin: 15px;
+        }
+        width: 83.3333%;
+        background-color: $light-grey;
+
+        @include mt(md) {
+            position: absolute;
+            margin-top: auto;
+            right: 15px;
+            top: 15px;
+            width: 33.3333%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            align-items: start;
+
+            h1 {
+                margin-bottom: 0;
+            }
+        } 
+    }
+}
